@@ -95,16 +95,36 @@ for(seatName of allseatName){
     })
 }
 
+// const otherButton = document.getElementById('otherButton');
+// const submitButton = document.getElementById('submitButton');
 
-function validate(){
+// otherButton.addEventListener('click', () => {
+//   submitButton.disabled = false;
+// });
+    
+
+
+ function validate(){
+    const submitBtn = document.getElementById('submit-btn');
     const number = document.getElementById('phone')  
-    if(number.value.trim() == ''){
-        alert('Please Added Phone Number')
-        return false
+     if(number.value.trim() == ''){
+        submitBtn.disabled = false;
+         return false
     }else{
         true
-    }
-}
+     }
+ }
+
+
+// const number = document.getElementById('phone')  ;
+// if(number.value.trim() == ''){
+//     submitBtn.disabled = false;
+//     return false;
+// }
+// else{
+//     true
+// }
+    
 
 
 
