@@ -56,8 +56,8 @@ for(seatName of allseatName){
 
                 //  Coupon Code Area 
                  const calculateButton = document.getElementById('calculate-btn');
-                 const discountCodeInput = document.getElementById('discount-code')
-                 if(SeatNumber >= selectSeatNumber){
+                 const discountCodeInput = document.getElementById('discount-code');
+                 if(SeatNumber <= selectSeatNumber){
                     calculateButton.style.backgroundColor ='#1DD100';
                  }
                  calculateButton.addEventListener('click', function(event){
@@ -65,7 +65,7 @@ for(seatName of allseatName){
                     
                      const couponCodeWrapper = document.getElementById('coupon-code-area');
                      const discountCode = discountCodeInput.value
-                    if(SeatNumber === selectSeatNumber){
+                    if(SeatNumber <= selectSeatNumber){
                     
                      if(discountCode === "NEW15"){
                          grandTotalCost = grandTotalCost - (grandTotalCost * 0.15)
