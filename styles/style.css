@@ -81,3 +81,6 @@ button {
   justify-content: center;
   flex-direction: column;
 }
+.hidden-section {
+  display: none;
+}

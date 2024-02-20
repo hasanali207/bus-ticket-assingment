@@ -21,6 +21,7 @@ for(seatName of allseatName){
                 event.target.style.color = '#fff';
                 event.target.style.borderRadius = '6px';
                 
+            // Append Content in total 
                 const getSeatName = event.target.innerText;           
                 const appendContainer = document.getElementById('append-selected-seat') ;   
                  const newElement = document.createElement('div');
@@ -39,6 +40,7 @@ for(seatName of allseatName){
                 appendContainer.appendChild(newElement)
 
 
+// Total and Grand Total 
 
                 let totalCost =  getTextElementValueById('total-cost');
                 let  sumOfTotalCost = totalCost + ticketPrice
@@ -50,6 +52,7 @@ for(seatName of allseatName){
                  setInnerText('grand-total', grandTotalCost)
                 
 
+                //  Coupon Code Area 
                  const calculateButton = document.getElementById('calculate-btn');
                  const discountCodeInput = document.getElementById('discount-code')
                  if(SeatNumber === selectSeatNumber){
@@ -85,26 +88,8 @@ for(seatName of allseatName){
                 alert('No, ticket is avaiable For purchase')
              }
       
-    
-      
 
-    // SeatNumberCoundown up to down
-        
-        
-// Append Content 
-    
-
-
-
-
-
-      
-
-
-       
-      
-      
-
+ 
   
     })
 }
@@ -112,9 +97,13 @@ for(seatName of allseatName){
 
 
 
+
 const mainContent = document.getElementById('main-content')
 const submitButton = document.getElementById('submit-btn')
-
+submitButton.addEventListener('click', function(){
+    document.querySelector('main').style.display = 'none'
+    document.querySelector('.hidden-section').style.display = 'block'
+})
 
 
 
@@ -131,10 +120,7 @@ function getTextElementValueById(elementId){
     return value;
 }
 
-function hideElementById(elementId) {
-    const element = document.getElementById(elementId);
-    element.classList.add('hidden');
-}
+
 
 function showElementById(elementId) {
     const element = document.getElementById(elementId);
