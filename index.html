@@ -64,7 +64,7 @@
           <div class="max-w-[40rem]">
             <h1 class=" text-4xl lg:text-5xl font-bold">End-to-End Travel with </h1> <br> <h1 class="text-[#1DD100] text-4xl lg:text-5xl font-bold">Hasan Paribahan</h1> 
             <p class="mb-5 text-white mt-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button class=" mt-4 rounded-md text-white text-xl  bg-[#1DD100] hover:bg-[#20AE5C40]">Buy Ticket</button>
+            <a href="#buy-ticket"><button class=" mt-4 rounded-md text-white text-xl  bg-[#1DD100] hover:bg-[#20AE5C40]">Buy Ticket</button></a>
           </div>
         </div>
       </div>
@@ -190,7 +190,7 @@
 
 
     
-    <section class="py-20">
+    <section class="py-20" id="buy-ticket">
       <div class="container">
         <div class="seat-section-wrapper flex space-x-5 flex-col lg:flex-row">
           <div class="seat-section-left pr-10 w-full lg:w-3/4 border-b-2 lg:border-r-2 lg:border-b-0 border-dashed border-gray-300">
@@ -212,17 +212,35 @@
               <div class="flex mb-5">
                 <div><button>A</button></div>
                 <div class="flex justify-between w-full">
-                  <div class="" ><button class="seat-name btn mr-8">A1</button><button class="btn seat-name">A3</button></div>
-                  <div class="" ><button class="seat-name btn mr-8">A1</button><button class="btn seat-name">A4</button></div>
+                  <div class="" ><button class="seat-name btn mr-8">A1</button><button class="btn seat-name">A2</button></div>
+                  <div class="" ><button class="seat-name btn mr-8">A3</button><button class="btn seat-name">A4</button></div>
                 </div>
               </div>
              <!-- End group of Seat  -->
               <!-- A group of Seat  -->
               <div class="flex mb-5">
-                <div><button>A</button></div>
+                <div><button>B</button></div>
                 <div class="flex justify-between w-full">
-                  <div class="" ><button class="seat-name btn mr-8">A1</button><button class="btn seat-name">A3</button></div>
-                  <div class="" ><button class="seat-name btn mr-8">A1</button><button class="btn seat-name">A4</button></div>
+                  <div class="" ><button class="seat-name btn mr-8">B1</button><button class="btn seat-name">B2</button></div>
+                  <div class="" ><button class="seat-name btn mr-8">B3</button><button class="btn seat-name">B4</button></div>
+                </div>
+              </div>
+             <!-- End group of Seat  -->
+              <!-- A group of Seat  -->
+              <div class="flex mb-5">
+                <div><button>C</button></div>
+                <div class="flex justify-between w-full">
+                  <div class="" ><button class="seat-name btn mr-8">C1</button><button class="btn seat-name">C2</button></div>
+                  <div class="" ><button class="seat-name btn mr-8">C3</button><button class="btn seat-name">C4</button></div>
+                </div>
+              </div>
+             <!-- End group of Seat  -->
+              <!-- A group of Seat  -->
+              <div class="flex mb-5">
+                <div><button>D</button></div>
+                <div class="flex justify-between w-full">
+                  <div class="" ><button class="seat-name btn mr-8">D1</button><button class="btn seat-name">D2</button></div>
+                  <div class="" ><button class="seat-name btn mr-8">D3</button><button class="btn seat-name">D4</button></div>
                 </div>
               </div>
              <!-- End group of Seat  -->
@@ -253,6 +271,12 @@
               <p class="text-[#030712] font-semibold">Total Price</p>
               <p class="text-[#030712] font-semibold">BDT <span id="total-cost">0</span></p>
             </div>
+            <div id="append-dicount-cost">
+              <div id="add-discount-cost" class="flex justify-between  mt-3">
+                
+              </div>
+            </div>
+
             <div id="coupon-code-area"  class="flex py-6 space-x-4">
               <input
                 type="text"
@@ -275,7 +299,7 @@
               <p class="text-[#030712] font-semibold">Grand Total</p>
               <p class="text-[#030712] font-semibold">BDT <span id="grand-total">0</span> </p>
             </div>
-            <form class="p-4">
+            <form class="p-4" onsubmit="return validate()" action="message.html">
               <div class="mb-4">
                 <label
                   for="name"
@@ -294,11 +318,11 @@
                 <label
                   for="email"
                   class="block text-gray-700 text-sm font-bold mb-2"
-                  >Email ID</label
+                  >Phone</label
                 >
                 <input
                   type="number"
-                  required
+                  
                   id="phone"
                   name="number"
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -322,7 +346,7 @@
               <button
                 type="submit" 
                 id="submit-btn"
-                class="w-full bg-green-500 disabled hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
               >
                 Submit
               </button>

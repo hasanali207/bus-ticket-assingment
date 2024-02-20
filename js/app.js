@@ -51,11 +51,13 @@ for(seatName of allseatName){
                   let grandTotalCost = grandTotal + ticketPrice;
                  setInnerText('grand-total', grandTotalCost)
                 
+                 
+                 
 
                 //  Coupon Code Area 
                  const calculateButton = document.getElementById('calculate-btn');
                  const discountCodeInput = document.getElementById('discount-code')
-                 if(SeatNumber === selectSeatNumber){
+                 if(SeatNumber >= selectSeatNumber){
                     calculateButton.style.backgroundColor ='#1DD100';
                  }
                  calculateButton.addEventListener('click', function(event){
@@ -70,7 +72,7 @@ for(seatName of allseatName){
                          setInnerText('grand-total', grandTotalCost)
                          couponCodeWrapper.style.display = 'none'
                      }
-                     else if(discountCode === "Couple 20"){
+                     if(discountCode === "Couple 20"){
                          grandTotalCost = grandTotalCost - (grandTotalCost * 0.20)
                          setInnerText('grand-total', grandTotalCost)
                          couponCodeWrapper.style.display = 'none'
@@ -87,23 +89,31 @@ for(seatName of allseatName){
                else{
                 alert('No, ticket is avaiable For purchase')
              }
-      
-
- 
+            
+           
   
     })
 }
 
 
+function validate(){
+    const number = document.getElementById('phone')  
+    if(number.value.trim() == ''){
+        alert('Please Added Phone Number')
+        return false
+    }else{
+        true
+    }
+}
 
 
 
-const mainContent = document.getElementById('main-content')
-const submitButton = document.getElementById('submit-btn')
-submitButton.addEventListener('click', function(){
-    document.querySelector('main').style.display = 'none'
-    document.querySelector('.hidden-section').style.display = 'block'
-})
+
+// const submitButton = document.getElementById('submit-btn')
+// submitButton.addEventListener('click', function(){
+//     document.querySelector('main').style.display = 'none'
+//     document.querySelector('.hidden-section').style.display = 'block'
+// })
 
 
 
