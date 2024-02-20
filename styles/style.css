@@ -1,0 +1,83 @@
+body {
+  position: relative;
+  font-family: "Inter", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+button {
+  padding: 10px 30px !important;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.seat-name-top {
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+}
+
+.disabled {
+  cursor: "not-allowed";
+  pointer-events: "none";
+}
+.hidden {
+  display: none;
+}
+.submit-success-content {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust shadow values as needed */
+}
+.section-title {
+  color: var(--black-color);
+  text-align: center;
+  font-family: Mulish;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.coupole-section {
+  background: url("images/rectangle.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-wrappper {
+  background: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url(../Images/banner.png);
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  background-size: cover;
+  padding: 100px 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
