@@ -10,7 +10,7 @@ for(seatName of allseatName){
 
             if(selectSeatNumber < 4){
                 selectSeatNumber = selectSeatNumber + 1;
-                setInnerText('select-seat-number', selectSeatNumber)
+                let selectSeat = setInnerText('select-seat-number', selectSeatNumber)
                 
                 ticketCount = ticketCount - 1;
                 setInnerText('available-seat', ticketCount)
@@ -95,14 +95,7 @@ for(seatName of allseatName){
     })
 }
 
-// const otherButton = document.getElementById('otherButton');
-// const submitButton = document.getElementById('submitButton');
-
-// otherButton.addEventListener('click', () => {
-//   submitButton.disabled = false;
-// });
-    
-
+  
 
  function validate(){
     const submitBtn = document.getElementById('submit-btn');
@@ -114,27 +107,6 @@ for(seatName of allseatName){
         true
      }
  }
-
-
-// const number = document.getElementById('phone')  ;
-// if(number.value.trim() == ''){
-//     submitBtn.disabled = false;
-//     return false;
-// }
-// else{
-//     true
-// }
-    
-
-
-
-
-// const submitButton = document.getElementById('submit-btn')
-// submitButton.addEventListener('click', function(){
-//     document.querySelector('main').style.display = 'none'
-//     document.querySelector('.hidden-section').style.display = 'block'
-// })
-
 
 
 function setInnerText(id,value){
@@ -150,31 +122,3 @@ function getTextElementValueById(elementId){
     return value;
 }
 
-
-
-function showElementById(elementId) {
-    const element = document.getElementById(elementId);
-    element.classList.remove('hidden');
-}
-
-
-// const selectSeatNumber = getTextElementValueById('current-life');
-// const updatedLife = selectSeatNumber - 1;
-// setTextElementValueById('selectSeatNumber', updatedLife);
-
-// if(updatedLife === 0){
-//     gameOver();
-// }
-
-
-// function getInputValueById(inputFieldId){
-//     const inputField = document.getElementById(inputFieldId);
-//     const inputValueText = inputField.value;
-//     // console.log(inputValue);
-//     return inputValueText;
-// }
-
-// // function setInnerTextById(elementId, area){
-// //     const element = document.getElementById(elementId);
-// //     element.innerText = area;
-// // }
