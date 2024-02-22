@@ -76,6 +76,7 @@ for(seatName of allseatName){
                          grandTotalCost = grandTotalCost - (grandTotalCost * 0.20)
                          setInnerText('grand-total', grandTotalCost)
                          couponCodeWrapper.style.display = 'none'
+                         
                      }
                      
                     }
